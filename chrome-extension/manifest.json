@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "PokéSurvivor Mod Menu",
+  "version": "1.0",
+  "description": "Menu de Mods oficial para o PokeSurvivor: libera todos os Pokémons, Shinies e recursos.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://pokesurvivor.com/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pokesurvivor.com/*",
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
